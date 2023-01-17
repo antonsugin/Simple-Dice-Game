@@ -1,0 +1,161 @@
+@import 'variables';
+@import 'mixins';
+
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: $primary-color;
+}
+
+h1 {
+    text-align: center;
+    margin: 5rem 0;
+    color: $txt-color;
+    letter-spacing: $spacing;
+    font-family: $fonts;
+    font-weight: 700;
+    font-size: 5rem;
+
+    @media screen and (max-width: 600px) {
+        & {
+            font-size: 3rem;
+        }
+      }
+}
+
+img {
+    max-width: 50%;
+    height: auto;
+    background-color: $secondary-color;
+    border-radius: 12.5%;
+}
+
+button {
+    background-color: $secondary-color;
+    color: $txt-color;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 10px;
+    padding: 1rem 2rem;
+    letter-spacing: $spacing;
+    display: inline-block;
+    font-family: $fonts;
+    font-weight: 700;
+    font-size: 1.2rem;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #03C988;
+        color: white;
+    }
+
+    @media screen and (max-width: 600px) {
+        & {
+            padding: .8rem 1.7rem;
+            font-size: 1rem;
+        }
+      }
+  }
+
+
+.container {
+    display: flex;
+    justify-content: space-around;
+
+    @media screen and (max-width: 1000px) {
+        & {
+          flex-direction: column-reverse;
+          align-items: center;
+          gap: 7rem;
+          margin-bottom: 5rem;
+        }
+      }
+}
+
+
+.players {
+    display: flex;
+    color: $secondary-color;
+    letter-spacing: $spacing;
+
+    &__names, &__wins {
+        @include flex-font;
+    }
+
+    &__wins {
+        color: $txt-color;
+        margin-left: 3rem;
+
+        & :not(:last-child) {
+            margin-bottom: 5rem;
+        }
+    }
+
+    &__names :not(:last-child) {
+        margin-bottom: 5rem;
+    }
+}
+
+.dice {
+    width: 50%;
+    display: flex;
+    letter-spacing: $spacing;
+    color: $txt-color;
+
+    &__player-1, &__player-2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    &__name-1, &__name-2 {
+        margin-bottom: 5rem;
+        font-family: $fonts;
+        font-weight: 500;
+        font-size: 1.5rem;
+    }
+
+    @media screen and (max-width: 600px) {
+        & {
+            width: auto;
+        }
+      }
+
+    @media screen and (max-width: 300px) {
+        & {
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+      }
+}
+
+.navigation {
+    @include flex-font;
+
+    & :not(:last-child) {
+        margin-bottom: 5rem;
+    }
+    
+}
+
+.disabled {
+    visibility: hidden;
+}
+
+.is-active {
+    background-color: #03C988;
+    color: white;
+}
+
+.enabled {
+    visibility: visible;
+}
+  
+  

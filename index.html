@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="/photos/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,700&display=swap" rel="stylesheet">
+    <title>Dice Game</title>
+</head>
+<body>
+    <h1 id="header">Good Luck!!!</h1>
+    <div class="container">
+
+        <div class="players">
+            <div class="players__names">
+                <h3 class="name__player-1" id="prompt-name1">Player 1</h3>
+                <h3 class="name__player-2" id="prompt-name2">Player 2</h3>
+                <h3 class="draw">Draw</h3>
+            </div>
+            <div class="players__wins">
+                <h3 class="win__player-1" id="win1">0</h3>
+                <h3 class="win__player-2" id="win2">0</h3>
+                <h3 class="win__draw" id="windraw">0</h3>
+            </div>
+        </div>
+
+        <div class="dice">
+
+            <div class="dice__player-1">
+                <div class="dice__name-1" id="prompt-player1">Player 1</div>
+                <div class="dice__img-1">
+                    <img src="photos/dice-6.png" id="firstDice" alt="dice image">
+                </div>
+            </div>
+
+            <div class="dice__player-2">
+                <div class="dice__name-2" id="prompt-player2">Player 2</div>
+                <div class="dice__img-2">
+                    <img src="photos/dice-2.png" id="secondDice" alt="dice image">
+                </div>
+
+            </div>
+        </div>
+
+        <div class="navigation">
+            <button class="roll-btn" id="roll">Roll Dice</button>
+            <button class="start-btn" id="start">Start New Game</button>
+            <button class="restart-btn" id="restart">Restart</button>
+        </div>
+
+    </div>
+    
+<script src="index.js"></script>    
+</body>
+</html>
