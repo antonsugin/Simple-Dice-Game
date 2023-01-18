@@ -53,6 +53,11 @@ button:hover {
   color: white;
 }
 
+button:focus {
+  background-color: #FFEBB7;
+  color: #FF734B;
+}
+
 @media screen and (max-width: 600px) {
   button {
     padding: .8rem 1.7rem;
@@ -79,6 +84,13 @@ button:hover {
             align-items: center;
     gap: 7rem;
     margin-bottom: 5rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    gap: 3rem;
+    margin-bottom: 3rem;
   }
 }
 
@@ -119,6 +131,18 @@ button:hover {
   margin-bottom: 5rem;
 }
 
+@media screen and (max-width: 600px) {
+  .players__names, .players__wins {
+    gap: 3rem;
+  }
+  .players__wins :not(:last-child) {
+    margin-bottom: 0;
+  }
+  .players__names :not(:last-child) {
+    margin-bottom: 0;
+  }
+}
+
 .dice {
   width: 50%;
   display: -webkit-box;
@@ -153,6 +177,12 @@ button:hover {
   .dice {
     width: auto;
   }
+  .dice__name-1, .dice__name-2 {
+    margin-bottom: 0;
+  }
+  .dice__player-1, .dice__player-2 {
+    gap: 1rem;
+  }
 }
 
 @media screen and (max-width: 300px) {
@@ -181,6 +211,19 @@ button:hover {
 
 .navigation :not(:last-child) {
   margin-bottom: 5rem;
+}
+
+@media screen and (max-width: 600px) {
+  .navigation {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    gap: 1rem;
+  }
+  .navigation :not(:last-child) {
+    margin-bottom: 0;
+  }
 }
 
 .disabled {

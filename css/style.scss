@@ -55,6 +55,11 @@ button {
         color: white;
     }
 
+    &:focus {
+        background-color: $secondary-color;
+        color: $txt-color;
+    }
+
     @media screen and (max-width: 600px) {
         & {
             padding: .8rem 1.7rem;
@@ -63,7 +68,7 @@ button {
       }
   }
 
-
+  
 .container {
     display: flex;
     justify-content: space-around;
@@ -74,6 +79,13 @@ button {
           align-items: center;
           gap: 7rem;
           margin-bottom: 5rem;
+        }
+      }
+
+      @media screen and (max-width: 600px) {
+        & {
+          gap: 3rem;
+          margin-bottom: 3rem;
         }
       }
 }
@@ -100,7 +112,21 @@ button {
     &__names :not(:last-child) {
         margin-bottom: 5rem;
     }
+
+    @media screen and (max-width: 600px) {
+        &__names, &__wins {
+            gap: 3rem;
+        }
+
+        &__wins :not(:last-child){
+            margin-bottom: 0;
+        }
+        &__names :not(:last-child){
+            margin-bottom: 0;
+        }
+      }
 }
+
 
 .dice {
     width: 50%;
@@ -126,6 +152,14 @@ button {
         & {
             width: auto;
         }
+
+        &__name-1, &__name-2 {
+            margin-bottom: 0;
+        }
+
+        &__player-1, &__player-2 {
+            gap: 1rem;
+        }
       }
 
     @media screen and (max-width: 300px) {
@@ -142,8 +176,20 @@ button {
     & :not(:last-child) {
         margin-bottom: 5rem;
     }
+
+    @media screen and (max-width: 600px) {
+        & {
+            flex-direction: column-reverse;
+            gap: 1rem;
+        }
+
+        & :not(:last-child) {
+            margin-bottom: 0;
+        }
+      }
     
 }
+
 
 .disabled {
     visibility: hidden;
